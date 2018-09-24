@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="还是要加个标题###">
+<meta name="description" content="还是要加个标题">
 <meta name="keywords" content="experience">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VS调试遇到的问题">
 <meta property="og:url" content="http://yoursite.com/2018/09/13/遇见的几个问题/index.html">
 <meta property="og:site_name" content="HCLI712214">
-<meta property="og:description" content="还是要加个标题###">
+<meta property="og:description" content="还是要加个标题">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-09-17T14:38:10.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VS调试遇到的问题">
-<meta name="twitter:description" content="还是要加个标题###">
+<meta name="twitter:description" content="还是要加个标题">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -289,34 +289,27 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="还是要加个标题"><a class="markdownIt-Anchor" href="#还是要加个标题"></a> 还是要加个标题###</h3>
-<a id="more"></a>
-<h3 id="无法解析外部符号"><a class="markdownIt-Anchor" href="#无法解析外部符号"></a> 无法解析外部符号###</h3>
-<blockquote>
-<p>有可能是位数的问题。可以设置为电脑对应位数的调试器</p>
+        <h3 id="还是要加个标题"><a href="#还是要加个标题" class="headerlink" title="还是要加个标题"></a>还是要加个标题</h3><a id="more"></a>
+<h3 id="无法解析外部符号"><a href="#无法解析外部符号" class="headerlink" title="无法解析外部符号"></a>无法解析外部符号</h3><blockquote>
+<p> 有可能是位数的问题。可以设置为电脑对应位数的调试器</p>
 </blockquote>
-<h3 id="无法找到pdb文件"><a class="markdownIt-Anchor" href="#无法找到pdb文件"></a> 无法找到pdb文件###</h3>
-<blockquote>
+<h3 id="无法找到pdb文件"><a href="#无法找到pdb文件" class="headerlink" title="无法找到pdb文件"></a>无法找到pdb文件</h3><blockquote>
 <p>可以1.在调试&gt;设置&gt;常规里，启用源服务器支持</p>
 <p>​        2.在调试&gt;设置&gt;符号里，勾选启用符号服务器</p>
-<p>​        3.可以将对应的文件放在可执行文件的同目录下</p>
+<p>​        3.可以将对应的文件放在可执行文件的同目录下 </p>
 </blockquote>
-<h3 id="在vs中添加h文件lib文件dll文件"><a class="markdownIt-Anchor" href="#在vs中添加h文件lib文件dll文件"></a> 在vs中添加.h文件.lib文件.dll文件###</h3>
-<blockquote>
-<p>H文件目录: 依次点击“项目——XX 属性——C/C++——常规”， 在“附加包含目录”中加入H文件所在的文件夹  LIB目录: 依次点击“项目——XX 属性——链接器——常规”，在“附加库目录”中加入LIB所在目录 还没完，在“链接器”中找到“输入”，在“附加依赖项”中加入.lib</p>
-<p>.dll文件可以在项目&gt;属性&gt;配置&gt;调试里的环境中，手动加入文件路径。PATH=&quot;  XXXXXX&quot;;  <code>；</code>号结尾</p>
+<h3 id="在vs中添加-h文件-lib文件-dll文件"><a href="#在vs中添加-h文件-lib文件-dll文件" class="headerlink" title="在vs中添加.h文件.lib文件.dll文件"></a>在vs中添加.h文件.lib文件.dll文件</h3><blockquote>
+<p> H文件目录: 依次点击“项目——XX 属性——C/C++——常规”， 在“附加包含目录”中加入H文件所在的文件夹  LIB目录: 依次点击“项目——XX 属性——链接器——常规”，在“附加库目录”中加入LIB所在目录 还没完，在“链接器”中找到“输入”，在“附加依赖项”中加入.lib </p>
+<p>.dll文件可以在项目&gt;属性&gt;配置&gt;调试里的环境中，手动加入文件路径。PATH=”  XXXXXX”;  <code>；</code>号结尾</p>
 </blockquote>
-<h3 id="在调试时找不到-crtexec"><a class="markdownIt-Anchor" href="#在调试时找不到-crtexec"></a> 在调试时找不到 CRTEXE.C###</h3>
-<blockquote>
-<p>我们程序里的winMain函数是被crt0.c或crtexe.c(视编译选项定)中的代码调用的，这两个文件中代码主要是做一些初始化工作，比如winMain的实参就是它们提供的。目录大约是(以我的为例)： “C:\Program Files\Microsoft Visual Studio 8\VC\crt\src” ,可以手动搜索添加，也可以在VS的source目录中增加对应crt的路径。</p>
+<h3 id="在调试时找不到-CRTEXE-C"><a href="#在调试时找不到-CRTEXE-C" class="headerlink" title="在调试时找不到 CRTEXE.C"></a>在调试时找不到 CRTEXE.C</h3><blockquote>
+<p>我们程序里的winMain函数是被crt0.c或crtexe.c(视编译选项定)中的代码调用的，这两个文件中代码主要是做一些初始化工作，比如winMain的实参就是它们提供的。目录大约是(以我的为例)： “C:\Program Files\Microsoft Visual Studio 8\VC\crt\src” ,可以手动搜索添加，也可以在VS的source目录中增加对应crt的路径。 </p>
 </blockquote>
-<h3 id="vs2012-error-c4996-fopen-this-function-or-variable-may-be-unsafe"><a class="markdownIt-Anchor" href="#vs2012-error-c4996-fopen-this-function-or-variable-may-be-unsafe"></a> vs2012 error c4996: ‘fopen’: This function or variable may be unsafe###</h3>
-<blockquote>
-<p>解决方案，项目 =》属性 =》c/c++  =》预处理器=》点击预处理器定义，编辑，加入_CRT_SECURE_NO_WARNINGS，即可。</p>
+<h3 id="vs2012-error-c4996-‘fopen’-This-function-or-variable-may-be-unsafe"><a href="#vs2012-error-c4996-‘fopen’-This-function-or-variable-may-be-unsafe" class="headerlink" title="vs2012 error c4996: ‘fopen’: This function or variable may be unsafe"></a>vs2012 error c4996: ‘fopen’: This function or variable may be unsafe</h3><blockquote>
+<p> 解决方案，项目 =》属性 =》c/c++  =》预处理器=》点击预处理器定义，编辑，加入_CRT_SECURE_NO_WARNINGS，即可。 </p>
 </blockquote>
-<h3 id="error-lnk1112-模块计算机类型x64与目标计算机类型x86冲"><a class="markdownIt-Anchor" href="#error-lnk1112-模块计算机类型x64与目标计算机类型x86冲"></a> error LNK1112: 模块计算机类型“x64”与目标计算机类型“X86”冲</h3>
-<blockquote>
-<p><strong>解决方法：</strong></p>
+<h3 id="error-LNK1112-模块计算机类型“x64”与目标计算机类型“X86”冲"><a href="#error-LNK1112-模块计算机类型“x64”与目标计算机类型“X86”冲" class="headerlink" title="error LNK1112: 模块计算机类型“x64”与目标计算机类型“X86”冲"></a>error LNK1112: 模块计算机类型“x64”与目标计算机类型“X86”冲</h3><blockquote>
+<p> <strong>解决方法：</strong></p>
 <p>有两处需要设置：</p>
 <p>1、右击该项目，选择属性，在最上面点击 “配置管理器”，新建平台 “x64”,然后把 活动解决方案平台选为X64，点击关闭。</p>
 <p>2、在属性页选择 “链接器” —&gt;“高级”，在里边有一项名为目标计算机，将其改为：MachineX64 (/MACHINE:X64) ，然后点击确定。</p>
@@ -368,7 +361,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#还是要加个标题"><span class="toc-number">1.</span> <span class="toc-text"> 还是要加个标题###</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#无法解析外部符号"><span class="toc-number">2.</span> <span class="toc-text"> 无法解析外部符号###</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#无法找到pdb文件"><span class="toc-number">3.</span> <span class="toc-text"> 无法找到pdb文件###</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在vs中添加h文件lib文件dll文件"><span class="toc-number">4.</span> <span class="toc-text"> 在vs中添加.h文件.lib文件.dll文件###</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在调试时找不到-crtexec"><span class="toc-number">5.</span> <span class="toc-text"> 在调试时找不到 CRTEXE.C###</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vs2012-error-c4996-fopen-this-function-or-variable-may-be-unsafe"><span class="toc-number">6.</span> <span class="toc-text"> vs2012 error c4996: ‘fopen’: This function or variable may be unsafe###</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#error-lnk1112-模块计算机类型x64与目标计算机类型x86冲"><span class="toc-number">7.</span> <span class="toc-text"> error LNK1112: 模块计算机类型“x64”与目标计算机类型“X86”冲</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#还是要加个标题"><span class="toc-number">1.</span> <span class="toc-text">还是要加个标题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#无法解析外部符号"><span class="toc-number">2.</span> <span class="toc-text">无法解析外部符号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#无法找到pdb文件"><span class="toc-number">3.</span> <span class="toc-text">无法找到pdb文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在vs中添加-h文件-lib文件-dll文件"><span class="toc-number">4.</span> <span class="toc-text">在vs中添加.h文件.lib文件.dll文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在调试时找不到-CRTEXE-C"><span class="toc-number">5.</span> <span class="toc-text">在调试时找不到 CRTEXE.C</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vs2012-error-c4996-‘fopen’-This-function-or-variable-may-be-unsafe"><span class="toc-number">6.</span> <span class="toc-text">vs2012 error c4996: ‘fopen’: This function or variable may be unsafe</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#error-LNK1112-模块计算机类型“x64”与目标计算机类型“X86”冲"><span class="toc-number">7.</span> <span class="toc-text">error LNK1112: 模块计算机类型“x64”与目标计算机类型“X86”冲</span></a></li></ol>
         
     </div>
     <style>
@@ -460,7 +453,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/24/总结1/">总结1</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/">win10下VS2013+OpenCV2.4.9环境配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/15/ffmpeg/">ffmpeg的一些用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/13/遇见的几个问题/">VS调试遇到的问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/hexoyuju/">hexo的三条语句</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/06/git常用/">git常用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/08/test/">文章的标题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/05/hello-world/">欢迎来到我的博客！</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/24/实践课总结1/">实践课复习总结1</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/">win10下VS2013+OpenCV2.4.9环境配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/15/ffmpeg/">ffmpeg的一些用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/13/遇见的几个问题/">VS调试遇到的问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/hexoyuju/">hexo的三条语句</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/06/git常用/">git常用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/08/test/">文章的标题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/05/hello-world/">欢迎来到我的博客！</a></li></ul>
 
 
 
