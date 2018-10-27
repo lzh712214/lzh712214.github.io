@@ -442,7 +442,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/28/实践课复习总结2/">实践课复习总结2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/24/实践课复习总结1/">实践课复习总结1</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/24/常用网址/">常用的一些网站</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/">win10下VS2013+OpenCV2.4.9环境配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/15/ffmpeg/">ffmpeg的一些用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/13/遇见的几个问题/">VS调试遇到的问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/hexoyuju/">hexo的三条语句</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/06/git常用/">git常用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/08/test/">文章的标题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/05/hello-world/">欢迎来到我的博客！</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/27/vs2013 opengl openmesh 设置/">win10下vs2013+openGL+openmesh</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/28/实践课复习总结2/">实践课复习总结2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/24/实践课复习总结1/">实践课复习总结1</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/24/常用网址/">常用的一些网站</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/">win10下VS2013+OpenCV2.4.9环境配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/15/ffmpeg/">ffmpeg的一些用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/13/遇见的几个问题/">VS调试遇到的问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/hexoyuju/">hexo的三条语句</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/06/git常用/">git常用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/08/test/">文章的标题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/05/hello-world/">欢迎来到我的博客！</a></li></ul>
 
 
 
@@ -575,5 +575,21 @@ MathJax.Hub.Queue(function() {
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!--script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
