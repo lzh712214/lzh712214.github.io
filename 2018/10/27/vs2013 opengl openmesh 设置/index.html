@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="HCLI712214">
 <meta property="og:description" content="win10下vs2013+openGL+openmesh配置">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-27T03:35:43.354Z">
+<meta property="og:updated_time" content="2018-10-31T00:48:39.759Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="win10下vs2013+openGL+openmesh">
 <meta name="twitter:description" content="win10下vs2013+openGL+openmesh配置">
@@ -291,12 +291,13 @@
         <h3 id="win10下vs2013-openGL-openmesh配置"><a href="#win10下vs2013-openGL-openmesh配置" class="headerlink" title="win10下vs2013+openGL+openmesh配置"></a>win10下vs2013+openGL+openmesh配置</h3><a id="more"></a>
 <h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h4 id="1-下载对应版本的openGL和openmesh"><a href="#1-下载对应版本的openGL和openmesh" class="headerlink" title="1.下载对应版本的openGL和openmesh"></a>1.下载对应版本的<a href="https://d11.baidupcs.com/file/0de79dfc3400e28f906f42e99367d70e?bkt=p3-14000de79dfc3400e28f906f42e99367d70e8121f169000000024650&amp;xcode=f9e3f8bc2156ae0ef5d07a25a7bd39a1f4e881ddcffaf8f943e2603e8b06171591a6d10157420cfad33507190a84edc9316128a2cdfcce4d&amp;fid=1130772817-250528-165014505567767&amp;time=1540447807&amp;sign=FDTAXGERLQBHSK-DCb740ccc5511e5e8fedcff06b081203-NV2h8CBN9EgxvMlCWEf0FaTu4DE%3D&amp;to=d11&amp;size=149072&amp;sta_dx=149072&amp;sta_cs=13630&amp;sta_ft=zip&amp;sta_ct=7&amp;sta_mt=7&amp;fm2=MH%2CYangquan%2CAnywhere%2C%2Czhejiang%2Cct&amp;ctime=1479195718&amp;mtime=1479195718&amp;resv0=cdnback&amp;resv1=0&amp;vuk=2614070142&amp;iv=0&amp;htype=&amp;newver=1&amp;newfm=1&amp;secfm=1&amp;flow_ver=3&amp;pkey=14000de79dfc3400e28f906f42e99367d70e8121f169000000024650&amp;sl=76480590&amp;expires=8h&amp;rt=sh&amp;r=503055141&amp;mlogid=6901958797326326918&amp;vbdid=2407083837&amp;fin=glut.zip&amp;fn=glut.zip&amp;rtype=1&amp;dp-logid=6901958797326326918&amp;dp-callid=0.1.1&amp;hps=1&amp;tsl=80&amp;csl=80&amp;csign=ucXxyo%2FHBgKaC8SLytbDvQZZ5q0%3D&amp;so=0&amp;ut=6&amp;uter=4&amp;serv=0&amp;uc=2390164976&amp;ti=648eaef5c3fa81d195cf25d4d30f1b506c58e5fe58e10c66&amp;by=themis" target="_blank" rel="external">openGL</a>和<a href="http://www.openmesh.org/media/Releases/7.1/OpenMesh-7.1-VS2013-64-Bit-no-apps.exe" target="_blank" rel="external">openmesh</a></h4><h4 id="2-将下载好的openGL解压。"><a href="#2-将下载好的openGL解压。" class="headerlink" title="2.将下载好的openGL解压。"></a>2.将下载好的openGL解压。</h4><p>我下的压缩文件里会有两个.dll文件，两个.lib文件和一个.h文件。将两个.dll文件放到c:\windows\syswow64里。32位的电脑放到system32里。将两个.lib放入..\vs2013\vc\lib里，将.h放入vc\include\GL里，没有GL则新建。</p>
 <h4 id="3-将openmensh安装"><a href="#3-将openmensh安装" class="headerlink" title="3.将openmensh安装"></a>3.将openmensh安装</h4><p>之后如果要用到openmensh，就在工程的解决方案属性里把include和lib包含进去。</p>
+<p>最后在C\C++的预处理中加上_USE_MATH_DEFINES </p>
 <h1 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h1><p>​                   我是在打开<a href="http://staff.ustc.edu.cn/~fuxm/code/index.html#sec_surface_framework" target="_blank" rel="external">别人的工程</a>并编译时遇到问题的。首先，因为他的工程中用了qt，所以要先配置好qt。然后在打开工程是，要将解决方案-qt project settings 中的qt版本设置好。其次要配置包含目录和链接库。开始我是在vc++目录里配置的，发现没用。百度之后说，要在c/c++里配置，在附加包含目录里将openmesh的include和qt的include都包含进去，在链接器-》常规里把附加目录库，也是include包含进去，然后在链接器-》输入里把附加依赖项都包含进去。该工程的附加依赖项如下：</p>
 <p>qtmaind.lib<br>OpenMeshCored.lib<br>OpenMeshToolsd.lib<br>Qt5Core.lib<br>Qt5Gui.lib<br>Qt5OpenGL.lib<br>Qt5Widgets.lib<br>Qt53DInput.lib<br>glut.lib<br>opengl32.lib<br>glu32.lib</p>
 <p>按道理来说，如上配置调试是没有问题的。但是，报错了，一堆的xx文件未找到。然后我就在c/c++的附加包含目录里，将没要找到的都文件放了进去。如：原本是C:\qt\qt5\qt5.71\msvc2013_64\include   详细到C:\qt\qt5\qt5.71\msvc2013_64\include\Qwidgets.</p>
 <p>我遇到的报错一般是无法解析外部符号。这种就是链接库有问题，即.lib的包含问题。</p>
 <p>还有是xx文件未找到（no such file ….)。这种将文件正确的包含进去就行。</p>
-<p>还有一种就是项目计算机x86不匹配目标计算机x64。这个问题是将open GL的.h即glut.h，从解决方案里放入包含目录里时出现的问题。很简单，不要包含，就不报错。但如果不包含，他就会报一堆xxx符号无法解析之类的错。这里有一个问题，就是我们在将qt project settings 设置以后，原来的附加依赖项变少了。然后就导致了后面的一堆问题。最简单的方法就是，将上面的.lib文件直接复制粘贴进附加依赖项里。前提是，c/c++里的附加包含目录写对。</p>
+<p>还有一种就是项目计算机x86不匹配目标计算机x64。检查在vs的lib下有没有分64位，如我的有amd64，因此要将glut.lib和glut32.lib放在里面，否则就是无法打开文件。</p>
 
       
     </div>
@@ -308,7 +309,7 @@
         <p><span>本文标题:</span><a href="/2018/10/27/vs2013 opengl openmesh 设置/">win10下vs2013+openGL+openmesh</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">HCLI712214</a></p>
         <p><span>发布时间:</span>2018-10-27, 11:00:56</p>
-        <p><span>最后更新:</span>2018-10-27, 11:35:43</p>
+        <p><span>最后更新:</span>2018-10-31, 08:48:39</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/10/27/vs2013 opengl openmesh 设置/" title="win10下vs2013+openGL+openmesh">http://yoursite.com/2018/10/27/vs2013 opengl openmesh 设置/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/10/27/vs2013 opengl openmesh 设置/　　作者: HCLI712214" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
