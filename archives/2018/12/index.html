@@ -15,18 +15,16 @@
 
 
 
-<meta name="description" content="win10下VS2013+OpenCV2.4.9环境配置">
-<meta name="keywords" content="experience">
-<meta property="og:type" content="article">
-<meta property="og:title" content="win10下VS2013+OpenCV2.4.9环境配置">
-<meta property="og:url" content="http://yoursite.com/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/index.html">
+<meta name="description" content="这是我的第一个博客，用于学习语法及相关知识。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HCLI712214">
+<meta property="og:url" content="http://yoursite.com/archives/2018/12/index.html">
 <meta property="og:site_name" content="HCLI712214">
-<meta property="og:description" content="win10下VS2013+OpenCV2.4.9环境配置">
+<meta property="og:description" content="这是我的第一个博客，用于学习语法及相关知识。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-24T05:49:55.792Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="win10下VS2013+OpenCV2.4.9环境配置">
-<meta name="twitter:description" content="win10下VS2013+OpenCV2.4.9环境配置">
+<meta name="twitter:title" content="HCLI712214">
+<meta name="twitter:description" content="这是我的第一个博客，用于学习语法及相关知识。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -58,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>win10下VS2013+OpenCV2.4.9环境配置 | HCLI712214</title>
+<title>Archives: 2018/12 | HCLI712214</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -68,8 +66,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: true,
-        isArchive: false,
+        isPost: false,
+        isArchive: true,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -248,208 +246,56 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-win10下VS2013+OpenCV2.4.9环境配置" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/" class="article-date">
-      <time datetime="2018-09-17T11:24:32.000Z" itemprop="datePublished">2018-09-17</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a href="/2018/12/12/imagewarping/" class="archive-article-date">
+      <time datetime="2018-12-12T04:15:33.000Z" itemprop="datePublished">12-12</time>
 </a>
 
 
-    </div>
+        </div>
+         
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      win10下VS2013+OpenCV2.4.9环境配置
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/12/12/imagewarping/">IMAGE WARPING-IDW and RBF</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/experience/">experience</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="article-info info-on-archive">
           
-        <h3 id="win10下VS2013-OpenCV2-4-9环境配置"><a href="#win10下VS2013-OpenCV2-4-9环境配置" class="headerlink" title="win10下VS2013+OpenCV2.4.9环境配置"></a>win10下VS2013+OpenCV2.4.9环境配置</h3><a id="more"></a>
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><ol>
-<li><p>安装opencv后会有两个文件夹build和sources</p>
-</li>
-<li><p>将对应版本号的vs添加进PATH。如计算机&gt;属性&gt;高级系统设置&gt;环境变量&gt;path&gt;编辑   添加D:\opencv2.49\opencv\build\x64\vc12\bin。</p>
-</li>
-<li><p>打开工程属性，在“VC++”目录下，选择“包含目录”，选“编辑”，然后添加 opencv根目录中的inlcude，include\opencv，include\opencv2</p>
-</li>
-<li><p>打开工程属性，在“VC++”目录下，选择添加库目录，添加类如D:\opencv2.49\opencv\build\x64\vc12\lib的路径。</p>
-</li>
-<li><p>链接库的配置</p>
-<p>打开工程属性，选择“链接器”——&gt;”输入”——&gt;”附加依赖项”里面编辑，添加以下库：（19个带d的debug版lib在前，19个不带d的release版在后）</p>
-<p>opencv_ml249d.lib<br>opencv_calib3d249d.lib<br>opencv_contrib249d.lib<br>opencv_core249d.lib<br>opencv_features2d249d.lib<br>opencv_flann249d.lib<br>opencv_gpu249d.lib<br>opencv_highgui249d.lib<br>opencv_imgproc249d.lib<br>opencv_legacy249d.lib<br>opencv_objdetect249d.lib<br>opencv_ts249d.lib<br>opencv_video249d.lib<br>opencv_nonfree249d.lib<br>opencv_ocl249d.lib<br>opencv_photo249d.lib<br>opencv_stitching249d.lib<br>opencv_superres249d.lib<br>opencv_videostab249d.lib<br>opencv_objdetect249.lib<br>opencv_ts249.lib<br>opencv_video249.lib<br>opencv_nonfree249.lib<br>opencv_ocl249.lib<br>opencv_photo249.lib<br>opencv_stitching249.lib<br>opencv_superres249.lib<br>opencv_videostab249.lib<br>opencv_calib3d249.lib<br>opencv_contrib249.lib<br>opencv_core249.lib<br>opencv_features2d249.lib<br>opencv_flann249.lib<br>opencv_gpu249.lib<br>opencv_highgui249.lib<br>opencv_imgproc249.lib<br>opencv_legacy249.lib<br>opencv_ml249.lib</p>
-</li>
-</ol>
 
-      
-    </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/">win10下VS2013+OpenCV2.4.9环境配置</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">HCLI712214</a></p>
-        <p><span>发布时间:</span>2018-09-17, 19:24:32</p>
-        <p><span>最后更新:</span>2018-09-24, 13:49:55</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/" title="win10下VS2013+OpenCV2.4.9环境配置">http://yoursite.com/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/　　作者: HCLI712214" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
+          
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/class/">class</a></li></ul>
     </div>
 
-
-
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/09/24/常用网址/">
-                    常用的一些网站
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/09/15/ffmpeg/">
-                    ffmpeg的一些用法
-                </a>
-            </div>
-        
-    </nav>
-
-  
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#win10下VS2013-OpenCV2-4-9环境配置"><span class="toc-number">1.</span> <span class="toc-text">win10下VS2013+OpenCV2.4.9环境配置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置"><span class="toc-number"></span> <span class="toc-text">配置</span></a>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
-    </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
         </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"win10下VS2013+OpenCV2.4.9环境配置　| HCLI712214　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
-
-    
-</div>
-
-
-
-
-
-
-
-    
-        <section id="comments">
-    <style> aside.comment-bar { margin: auto 30px; }</style>
-    <div id="disqus_thread"></div>
-    <script>
-        var disqus_config = function(){
-            this.page.url = 'http://yoursite.com/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/';
-            this.page.identifier = '2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/';
-        };
-        var loadComment = function(){
-            var d = document, s = d.createElement('script');
-            s.src = '//.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        }
-    </script>
-    
-    <script> loadComment(); </script>
-
-</section>
-
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
 
     
 
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2018/09/24/常用网址/" title="上一篇: 常用的一些网站">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2018/09/15/ffmpeg/" title="下一篇: ffmpeg的一些用法">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/12/12/imagewarping/">IMAGE WARPING-IDW and RBF</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/27/vs2013 opengl openmesh 设置/">win10下vs2013+openGL+openmesh</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/28/实践课复习总结2/">实践课复习总结2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/24/实践课复习总结1/">实践课复习总结1</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/24/常用网址/">常用的一些网站</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/">win10下VS2013+OpenCV2.4.9环境配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/15/ffmpeg/">ffmpeg的一些用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/13/遇见的几个问题/">VS调试遇到的问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/hexoyuju/">hexo的三条语句</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/06/git常用/">git常用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/08/test/">文章的标题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/05/hello-world/">欢迎来到我的博客！</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
 </div>
       <footer id="footer">
     <div class="outer">

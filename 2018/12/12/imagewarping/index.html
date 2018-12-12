@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="win10下VS2013+OpenCV2.4.9环境配置">
-<meta name="keywords" content="experience">
+<meta name="description" content="image warpingimage warping">
+<meta name="keywords" content="class">
 <meta property="og:type" content="article">
-<meta property="og:title" content="win10下VS2013+OpenCV2.4.9环境配置">
-<meta property="og:url" content="http://yoursite.com/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/index.html">
+<meta property="og:title" content="IMAGE WARPING-IDW and RBF">
+<meta property="og:url" content="http://yoursite.com/2018/12/12/imagewarping/index.html">
 <meta property="og:site_name" content="HCLI712214">
-<meta property="og:description" content="win10下VS2013+OpenCV2.4.9环境配置">
+<meta property="og:description" content="image warpingimage warping">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-24T05:49:55.792Z">
+<meta property="og:updated_time" content="2018-12-12T05:02:20.117Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="win10下VS2013+OpenCV2.4.9环境配置">
-<meta name="twitter:description" content="win10下VS2013+OpenCV2.4.9环境配置">
+<meta name="twitter:title" content="IMAGE WARPING-IDW and RBF">
+<meta name="twitter:description" content="image warpingimage warping">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -58,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>win10下VS2013+OpenCV2.4.9环境配置 | HCLI712214</title>
+<title>IMAGE WARPING-IDW and RBF | HCLI712214</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -248,11 +248,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-win10下VS2013+OpenCV2.4.9环境配置" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-imagewarping" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/" class="article-date">
-      <time datetime="2018-09-17T11:24:32.000Z" itemprop="datePublished">2018-09-17</time>
+      <a href="/2018/12/12/imagewarping/" class="article-date">
+      <time datetime="2018-12-12T04:15:33.000Z" itemprop="datePublished">2018-12-12</time>
 </a>
 
 
@@ -267,7 +267,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      win10下VS2013+OpenCV2.4.9环境配置
+      IMAGE WARPING-IDW and RBF
     </h1>
   
 
@@ -278,7 +278,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/experience/">experience</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/class/">class</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -288,21 +288,22 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="win10下VS2013-OpenCV2-4-9环境配置"><a href="#win10下VS2013-OpenCV2-4-9环境配置" class="headerlink" title="win10下VS2013+OpenCV2.4.9环境配置"></a>win10下VS2013+OpenCV2.4.9环境配置</h3><a id="more"></a>
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><ol>
-<li><p>安装opencv后会有两个文件夹build和sources</p>
-</li>
-<li><p>将对应版本号的vs添加进PATH。如计算机&gt;属性&gt;高级系统设置&gt;环境变量&gt;path&gt;编辑   添加D:\opencv2.49\opencv\build\x64\vc12\bin。</p>
-</li>
-<li><p>打开工程属性，在“VC++”目录下，选择“包含目录”，选“编辑”，然后添加 opencv根目录中的inlcude，include\opencv，include\opencv2</p>
-</li>
-<li><p>打开工程属性，在“VC++”目录下，选择添加库目录，添加类如D:\opencv2.49\opencv\build\x64\vc12\lib的路径。</p>
-</li>
-<li><p>链接库的配置</p>
-<p>打开工程属性，选择“链接器”——&gt;”输入”——&gt;”附加依赖项”里面编辑，添加以下库：（19个带d的debug版lib在前，19个不带d的release版在后）</p>
-<p>opencv_ml249d.lib<br>opencv_calib3d249d.lib<br>opencv_contrib249d.lib<br>opencv_core249d.lib<br>opencv_features2d249d.lib<br>opencv_flann249d.lib<br>opencv_gpu249d.lib<br>opencv_highgui249d.lib<br>opencv_imgproc249d.lib<br>opencv_legacy249d.lib<br>opencv_objdetect249d.lib<br>opencv_ts249d.lib<br>opencv_video249d.lib<br>opencv_nonfree249d.lib<br>opencv_ocl249d.lib<br>opencv_photo249d.lib<br>opencv_stitching249d.lib<br>opencv_superres249d.lib<br>opencv_videostab249d.lib<br>opencv_objdetect249.lib<br>opencv_ts249.lib<br>opencv_video249.lib<br>opencv_nonfree249.lib<br>opencv_ocl249.lib<br>opencv_photo249.lib<br>opencv_stitching249.lib<br>opencv_superres249.lib<br>opencv_videostab249.lib<br>opencv_calib3d249.lib<br>opencv_contrib249.lib<br>opencv_core249.lib<br>opencv_features2d249.lib<br>opencv_flann249.lib<br>opencv_gpu249.lib<br>opencv_highgui249.lib<br>opencv_imgproc249.lib<br>opencv_legacy249.lib<br>opencv_ml249.lib</p>
-</li>
-</ol>
+        <h1 id="image-warping"><a href="#image-warping" class="headerlink" title="image warping"></a>image warping</h1><h3 id="image-warping-1"><a href="#image-warping-1" class="headerlink" title="image warping"></a>image warping</h3><a id="more"></a>
+<h2 id="IDW算法（Inverse-distanc-weighted-interpolation）"><a href="#IDW算法（Inverse-distanc-weighted-interpolation）" class="headerlink" title="IDW算法（Inverse distanc-weighted interpolation）"></a>IDW算法（Inverse distanc-weighted interpolation）</h2><p>​           这几天学了imagewarping的两种算法，IDW和RBF，本质上是找函数，算偏移，更新点。</p>
+<p> IDW的函数为</p>
+<p>​                        <script type="math/tex">f(p)=\sum_{i=1}^{n}\omega _{i}(p)f_{i}(p)</script></p>
+<p> 1.公式中的p是图像中的坐标点。</p>
+<p>2.w为权重。计算公式为<script type="math/tex">w_{i}(p)=\frac{\delta_(i) (p)}{\sum_{j=1}^{n}\delta _{j}(p)}</script></p>
+<p>其中，<script type="math/tex">\delta _{i}(p)=\frac{1}{d(p,p_{i})^{u}}</script> d(p,pi)为图像上的点到控制点pi的距离，u的值可以看情况取。</p>
+<p>3.fi(p)为$f_{i}(p)=q_{i}+T(p-p_{i})$ 这里的T是个2×2的矩阵，一般取1就行。</p>
+<p>代码转自<a href="https://blog.csdn.net/r1254/article/details/48159515" target="_blank" rel="external">https://blog.csdn.net/r1254/article/details/48159515</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"IDWwarping.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></div><div class="line"></div><div class="line"></div><div class="line">IDWwarping::IDWwarping()</div><div class="line">&#123;</div><div class="line">&#125;</div><div class="line"></div><div class="line">IDWwarping::IDWwarping(QVector&lt;QPoint&gt; &amp;m_point_p, QVector&lt;QPoint&gt; &amp;m_point_q)</div><div class="line">&#123;</div><div class="line">	u = <span class="number">2</span>;</div><div class="line">	p_points = m_point_p;</div><div class="line">	q_points = m_point_q;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">double</span> IDWwarping::wi_func(QPoint p, <span class="keyword">int</span> i)<span class="comment">//计算wi</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">double</span> tmp_sum = <span class="number">0</span>;</div><div class="line">	<span class="keyword">double</span> result;</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (p == p_points[i]) </div><div class="line">		<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line"></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">size_t</span> j = <span class="number">0</span>; j &lt; p_points.size(); j++)  <span class="comment">//size_t unsigned longlong</span></div><div class="line">	&#123;</div><div class="line">		tmp_sum += delta(p, p_points[j]);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	result = delta(p, p_points[i]) / tmp_sum; </div><div class="line">	<span class="keyword">return</span> result;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">double</span> IDWwarping::distance(QPoint p, QPoint pi)</div><div class="line">&#123;</div><div class="line">	<span class="keyword">double</span> m_result;</div><div class="line"></div><div class="line">	<span class="comment">//在这里返回不开方的值精度会更高吧</span></div><div class="line">	m_result = (p.rx() - pi.rx())*(p.rx() - pi.rx()) + (p.ry() - pi.ry())*(p.ry() - pi.ry());</div><div class="line">	<span class="keyword">return</span> m_result;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">double</span> IDWwarping::delta(QPoint p, QPoint pi)</div><div class="line">&#123;</div><div class="line">	<span class="keyword">double</span> m_result;</div><div class="line"></div><div class="line">	m_result = <span class="built_in">pow</span>(<span class="number">1.0</span> / distance(p, pi), u );<span class="comment">//= =</span></div><div class="line">	<span class="keyword">return</span> m_result;</div><div class="line">&#125;</div><div class="line"></div><div class="line">QPoint IDWwarping::fi_func(QPoint p, <span class="keyword">int</span> i)  <span class="comment">//矩阵T近似取1；</span></div><div class="line">&#123;</div><div class="line">	QPoint result = q_points[i];</div><div class="line"></div><div class="line">	result.rx() += (p.rx() - p_points[i].rx());</div><div class="line">	result.ry() += (p.ry() - p_points[i].ry());</div><div class="line"></div><div class="line">	<span class="keyword">return</span> result;</div><div class="line">&#125;</div><div class="line"></div><div class="line">QPoint IDWwarping::f_func(QPoint p)</div><div class="line">&#123;</div><div class="line">	<span class="function">QPoint <span class="title">result</span><span class="params">(<span class="number">0</span>, <span class="number">0</span>)</span></span>;</div><div class="line">	<span class="keyword">double</span> x = <span class="number">0</span>, y = <span class="number">0</span>;</div><div class="line"></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; p_points.size(); i++)</div><div class="line">	&#123;</div><div class="line">		x += fi_func(p, i).rx() * wi_func(p, i);</div><div class="line">		y += fi_func(p, i).ry() * wi_func(p, i);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	result.rx() = x;</div><div class="line">	result.ry() = y;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> result;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="RBF算法（Radial-basis-functions）"><a href="#RBF算法（Radial-basis-functions）" class="headerlink" title="RBF算法（Radial basis functions）"></a>RBF算法（Radial basis functions）</h2><p>其实RBF算法的原理和IDW差不多，都是找个函数，算个偏移量，然后偏移点。</p>
+<p>函数为：<script type="math/tex">f(p)=\sum_{n}^{i=1}\alpha _{i}f_{i}(d(p,p_{i}))+p_{m}(p)</script></p>
+<p>1.这里的a是系数，是要算的未知数。</p>
+<p>2.p（m）是一个多项式，据说是m=1的时候效果就很好了，然后m就取1了。</p>
+<p>3.f(d)=(d^2+r^2)^u,这里的d是图像上的点p到控制点pi的的距离，r是对应控制点pi到除了自己以外的其他控制点的最短距离。然后u同上，可以取负值。</p>
+<p>由于系数不知道，所以要先解方程组，将控制点带入上述的方程就能解出系数。哦对了，因为具体操作的时候是在坐标的x和y的基础上进行的，所以要分别算出来。具体代码不在这里贴了，忘了转自谁。</p>
 
       
     </div>
@@ -311,13 +312,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/">win10下VS2013+OpenCV2.4.9环境配置</a></p>
+        <p><span>本文标题:</span><a href="/2018/12/12/imagewarping/">IMAGE WARPING-IDW and RBF</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">HCLI712214</a></p>
-        <p><span>发布时间:</span>2018-09-17, 19:24:32</p>
-        <p><span>最后更新:</span>2018-09-24, 13:49:55</p>
+        <p><span>发布时间:</span>2018-12-12, 12:15:33</p>
+        <p><span>最后更新:</span>2018-12-12, 13:02:20</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/" title="win10下VS2013+OpenCV2.4.9环境配置">http://yoursite.com/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/　　作者: HCLI712214" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/12/12/imagewarping/" title="IMAGE WARPING-IDW and RBF">http://yoursite.com/2018/12/12/imagewarping/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/12/12/imagewarping/　　作者: HCLI712214" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -329,16 +330,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/09/24/常用网址/">
-                    常用的一些网站
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/09/15/ffmpeg/">
-                    ffmpeg的一些用法
+                <a href="/2018/10/27/vs2013 opengl openmesh 设置/">
+                    win10下vs2013+openGL+openmesh
                 </a>
             </div>
         
@@ -350,7 +345,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#win10下VS2013-OpenCV2-4-9环境配置"><span class="toc-number">1.</span> <span class="toc-text">win10下VS2013+OpenCV2.4.9环境配置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置"><span class="toc-number"></span> <span class="toc-text">配置</span></a>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#image-warping"><span class="toc-number">1.</span> <span class="toc-text">image warping</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#image-warping-1"><span class="toc-number">1.0.1.</span> <span class="toc-text">image warping</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IDW算法（Inverse-distanc-weighted-interpolation）"><span class="toc-number">1.1.</span> <span class="toc-text">IDW算法（Inverse distanc-weighted interpolation）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RBF算法（Radial-basis-functions）"><span class="toc-number">1.2.</span> <span class="toc-text">RBF算法（Radial basis functions）</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -386,7 +381,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"win10下VS2013+OpenCV2.4.9环境配置　| HCLI712214　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"IMAGE WARPING-IDW and RBF　| HCLI712214　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -405,8 +400,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'http://yoursite.com/2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/';
-            this.page.identifier = '2018/09/17/win10下VS2013+OpenCV2.4.9环境配置/';
+            this.page.url = 'http://yoursite.com/2018/12/12/imagewarping/';
+            this.page.identifier = '2018/12/12/imagewarping/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -428,15 +423,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/09/24/常用网址/" title="上一篇: 常用的一些网站">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/09/15/ffmpeg/" title="下一篇: ffmpeg的一些用法">
+            <a href="/2018/10/27/vs2013 opengl openmesh 设置/" title="下一篇: win10下vs2013+openGL+openmesh">
                 <i class="fa fa-angle-right"></i>
             </a>
         
